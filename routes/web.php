@@ -10,6 +10,7 @@ Route::get('/threads/create', function() {
 	return view('threads.create');
 });
 
-Route::get('/', function() {
-	return view('threads.index');
+Route::get('/', function () {
+	$name = 'John Doe';
+	return view('threads/hello', compact('name'));
 });
