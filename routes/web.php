@@ -15,6 +15,6 @@ Route::get('/', function () {
 	return view('threads/hello', compact('name'));
 });
 
-Route::get('/greeting/{id}/message/{count}', function ($id, $count) {
-	return view('threads/greeting', compact('id','count'));
-})->where(['id' => '[0-9]+', 'count' => '[0-9]+']);
+Route::get('/greeting/{id}', function ($id) {
+	return view('threads/greeting', compact('id'));
+})->where(['id' => '[1-4]+']);
