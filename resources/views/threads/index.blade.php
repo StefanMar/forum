@@ -8,15 +8,20 @@
                 <div class="panel-heading">Forum Threads</div>
 
                 <div class="panel-body">
-                    <h2>Post #1</h2>
-                    Description #1
-                </div>
+                    @foreach($threads as $thread)
 
-                <hr>
-
-                <div class="panel-body">
-                    <h2>Post #2</h2>
-                    Description #2
+                    <article>
+                        <div>
+                            <h4>
+                                {{ $thread->title }}
+                            </h4>
+                        </div>
+                        <div class = "body">
+                            {{ $thread->body }}
+                        </div>
+                    </article>
+                    
+                    @endforeach
                 </div>
             </div>
         </div>
