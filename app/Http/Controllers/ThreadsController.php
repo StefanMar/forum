@@ -19,8 +19,8 @@ class ThreadsController extends Controller
     }
     public function show($id)
     {
-    	$thread = DB::select('select * from threads where if=?')
+    	$thread = DB::select('select * from threads where id=?', [$id]);
 
-    	return view('threads.show');
+    	return view('threads.show',compact('thread'));
     }
 }
